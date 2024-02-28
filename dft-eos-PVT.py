@@ -26,7 +26,7 @@ def filter_by_temp_increment(df, increment):
     temps_to_include = np.arange(min_temp, max_temp + increment, increment)
     return df[df['T'].isin(temps_to_include)]
 
-file_name = 'dft_feal-brg.xlsx'
+file_name = 'file_name.xlsx'
 fig, ax = plt.subplots(figsize=(10, 8))
 
 # Adjust tick parameters for aesthetics
@@ -34,9 +34,8 @@ ax.tick_params(axis='both', which='both', top=True, right=True, direction='in', 
 
 # Dataset information
 datasets = [
-    {'sheet_name': 'mgsio3-ht-pvt', 'cmap': 'winter', 'label': 'MgSiO$_3$'},
-    {'sheet_name': 'fealo3_hs-ht-pvt', 'cmap': 'autumn', 'label': 'FeAlO$_3$-HS'},
-    # {'sheet_name': 'fealo3_ls-ht-pvt', 'cmap': 'cool', 'label': 'FeAlO$_3$-LS'},
+    {'sheet_name': 'sheet_name1', 'cmap': 'winter', 'label': 'sheet_name1'},
+    {'sheet_name': 'sheet_name2', 'cmap': 'autumn', 'label': 'sheet_name2'}
 ]
 
 legend_positions = [(.81, 0.98), (.98, 0.98)]  # Pre-defined legend positions
